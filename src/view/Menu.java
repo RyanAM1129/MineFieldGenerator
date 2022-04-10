@@ -33,7 +33,7 @@ public class Menu {
         String myTempString;
         myFlag = false;
         while (!myFlag) {
-            System.out.println("Please enter how many rows you would like: ");
+            //System.out.println("Please enter how many rows you would like: ");
             myTempString = myKeyboard.nextLine();
             if (isDigit(myTempString)) {
                 myN = Integer.parseInt(myTempString);
@@ -42,15 +42,15 @@ public class Menu {
         }
         myFlag = false;
         while(!myFlag) {
-            System.out.println("Please enter how many columns you would like: ");
+            //System.out.println("Please enter how many columns you would like: ");
             myTempString = myKeyboard.nextLine();
             if(isDigit(myTempString)) {
                 myM = Integer.parseInt(myTempString);
                 myFlag = true;
             }
         }
-        System.out.println("Enter the percent of mines you would like " +
-                "(Leave blank for default) :");
+        //System.out.println("Enter the percent of mines you would like " +
+        //        "(Leave blank for default) :");
         myTempString = myKeyboard.nextLine();
         if(isDigit(myTempString)) {
             myPercent = Integer.parseInt(myTempString);
