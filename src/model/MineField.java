@@ -74,20 +74,20 @@ public class MineField {
      * It determines the percentage from myScalar.
      */
     private void addMines() {
-        Random myRandomInt = new Random();
-        final int myArea = myN * myM;
-        final int myPercent = (int) Math.round(myArea * myScalar);
-        int myRowIndex;
-        int myColumnIndex;
+        Random theRandomInt = new Random();
+        final int theArea = myN * myM;
+        final int thePercent = (int) Math.round(theArea * myScalar);
+        int theRowIndex;
+        int theColumnIndex;
 
-        for (int i = 0; i < myPercent; i++) {
-            myRowIndex = myRandomInt.nextInt(myN);
-            myColumnIndex = myRandomInt.nextInt(myM);
-            while (myMineField[myRowIndex][myColumnIndex] == '*') {
-                myRowIndex = myRandomInt.nextInt(myN);
-                myColumnIndex = myRandomInt.nextInt(myM);
+        for (int i = 0; i < thePercent; i++) {
+            theRowIndex = theRandomInt.nextInt(myN);
+            theColumnIndex = theRandomInt.nextInt(myM);
+            while (myMineField[theRowIndex][theColumnIndex] == '*') {
+                theRowIndex = theRandomInt.nextInt(myN);
+                theColumnIndex = theRandomInt.nextInt(myM);
             }
-            myMineField[myRowIndex][myColumnIndex] = '*';
+            myMineField[theRowIndex][theColumnIndex] = '*';
         }
     }
 

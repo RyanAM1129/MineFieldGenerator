@@ -29,31 +29,31 @@ public class Menu {
     private MineField myMineField;
 
     void mainMenu() {
-        Scanner myKeyboard = new Scanner(System.in);
-        String myTempString;
+        Scanner theKeyboard = new Scanner(System.in);
+        String theTempString;
         myFlag = false;
         while (!myFlag) {
             //System.out.println("Please enter how many rows you would like: ");
-            myTempString = myKeyboard.nextLine();
-            if (isDigit(myTempString)) {
-                myN = Integer.parseInt(myTempString);
+            theTempString = theKeyboard.nextLine();
+            if (isDigit(theTempString)) {
+                myN = Integer.parseInt(theTempString);
                 myFlag = true;
             }
         }
         myFlag = false;
         while(!myFlag) {
             //System.out.println("Please enter how many columns you would like: ");
-            myTempString = myKeyboard.nextLine();
-            if(isDigit(myTempString)) {
-                myM = Integer.parseInt(myTempString);
+            theTempString = theKeyboard.nextLine();
+            if(isDigit(theTempString)) {
+                myM = Integer.parseInt(theTempString);
                 myFlag = true;
             }
         }
         //System.out.println("Enter the percent of mines you would like " +
         //        "(Leave blank for default) :");
-        myTempString = myKeyboard.nextLine();
-        if(isDigit(myTempString)) {
-            myPercent = Integer.parseInt(myTempString);
+        theTempString = theKeyboard.nextLine();
+        if(isDigit(theTempString)) {
+            myPercent = Integer.parseInt(theTempString);
             if(myPercent < 0 || myPercent > 100) {
                 myPercent = -1;
             }
