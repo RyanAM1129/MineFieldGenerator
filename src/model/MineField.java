@@ -83,6 +83,10 @@ public class MineField {
         for (int i = 0; i < myPercent; i++) {
             myRowIndex = myRandomInt.nextInt(myN);
             myColumnIndex = myRandomInt.nextInt(myM);
+            while (myMineField[myRowIndex][myColumnIndex] == '*') {
+                myRowIndex = myRandomInt.nextInt(myN);
+                myColumnIndex = myRandomInt.nextInt(myM);
+            }
             myMineField[myRowIndex][myColumnIndex] = '*';
         }
     }
